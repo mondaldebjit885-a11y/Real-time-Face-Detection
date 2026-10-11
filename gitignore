@@ -1,0 +1,65 @@
+This file instructs Git to ignore temporary files, virtual environments, cache directories, and large video test files in order to keep your repository clean and compact.
+
+## 📝 .gitignore
+Create a file called exactly **```unset
+.gitignore
+```** (remember that it needs to start with a dot and not have an extension such as `.txt`) and paste the following code:
+
+```text
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments (Highly recommended to ignore)
+.venv/
+venv/
+ENV/
+env/
+育env/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific media files (keeps heavy files off GitHub)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+```
+
+## 🛠️ Summary of What This Does
+
+| Category | Ignored Items | Reason |
+| :--- | :--- | :--- |
+| **Python Cache** | `__pycache__/`, `*.pyc` | Generated automatically by Python and slows down Git commit process. |
+| **Environments** | `.venv/`, `venv/` | Keeps local copies of installed libraries. Users are supposed to install using `requirements.txt`. |
+| **Media Files** | `*.mp4`, `*.png`, etc.
